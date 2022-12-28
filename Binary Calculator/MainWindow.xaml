@@ -1,0 +1,71 @@
+﻿<Window x:Class="BinaryCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BinaryCalculator"
+        mc:Ignorable="d"
+        Title="Binary Calc" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+
+    <StackPanel Margin="10">
+        <Label Content="Number1" HorizontalContentAlignment="Left"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox x:Name="num1TextBox" Width="350" HorizontalContentAlignment="Right"/>
+            <Button x:Name="num1Clear" Content="C" Margin="5,0,5,0" Width="20" Click="Num1Clear_Click"/>
+        </StackPanel>
+
+        <Label Content="Number2" HorizontalContentAlignment="Left"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox x:Name="num2TextBox" Width="350" HorizontalContentAlignment="Right"/>
+            <Button x:Name="num2Clear" Content="C" Margin="5,0,5,0" Width="20" Click="Num2Clear_Click"/>
+        </StackPanel>
+
+        <Separator Margin="100,10,100,10"/>
+
+        <StackPanel HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="addButton" Content="+" Width="40" Click="AddButton_Click"/>
+                <Button x:Name="subtractButton" Content="-" Width="40" Click="SubtractButton_Click"/>
+                <Button x:Name="multiplyButton" Content="*" Width="40" Click="MultiplyButton_Click"/>
+                <Button x:Name="divideButton" Content="/" Width="40" Click="DivideButton_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="ORButton" Content="|" Width="40" Click="ORButton_Click"/>
+                <Button x:Name="ANDButton" Content="&amp;" Width="40" Click="ANDButton_Click"/>
+                <Button x:Name="XORButton" Content="^" Width="40" Click="XORButton_Click"/>
+                <Button x:Name="NOTButton" Content="~" Width="40" Click="NOTButton_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="ACButton" Content="AC" Width="40" Click="ACButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Separator Margin="100,10,100,10"/>
+
+        <Label Content="Results" HorizontalContentAlignment="Center"/>
+
+        <StackPanel Margin="0,5,0,5" Orientation="Horizontal">
+            <Label Content="Bin" Width="60"/>
+            <TextBox x:Name="binaryTextBox" IsReadOnly="True" HorizontalScrollBarVisibility="Visible" Width="320" HorizontalContentAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Margin="0,5,0,5" Orientation="Horizontal">
+            <Label Content="Decimal" Width="60"/>
+            <TextBox x:Name="decimalTextBox" IsReadOnly="True" Width="320" HorizontalContentAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Margin="0,5,0,5" Orientation="Horizontal">
+            <Label Content="Octal" Width="60"/>
+            <TextBox x:Name="octalTextBox" IsReadOnly="True" Width="320" HorizontalContentAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Margin="0,5,0,5" Orientation="Horizontal">
+            <Label Content="Hex" Width="60"/>
+            <TextBox x:Name="hexTextBox" IsReadOnly="True" Width="320" HorizontalContentAlignment="Right"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
